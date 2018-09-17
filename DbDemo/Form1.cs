@@ -23,16 +23,7 @@ namespace DbDemo
             try
             {
                 var con = DatabaseConnection.getInstance().getConnection();
-                if (con.State != System.Data.ConnectionState.Open)
-                {
-                    con.Open();
-                    MessageBox.Show("Connection Successful");
-                }
-                else
-                {
-                    MessageBox.Show("Connection Alreadhy Established");
-                }
-              
+                con.Open();
             }
             catch(Exception ex)
             {
